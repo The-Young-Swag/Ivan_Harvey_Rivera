@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Xplizit NM7</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  
+    <div class="main">
+	
+  
+	<div class="nav-links">
+		<ul>
+			<li><a href="https://xplizit-nm7.github.io/Rivz_Rivera/"><button class="btn" >Home</button></a></li>
+			<li><button type="button" class="btn" onclick="openPopUp()">Favorites</button></li>
+			<li class="icon-li"><img src="images/moon.png" id="icon" alt="Moon icon"></li>
+		</ul>
+	</div>
+	
+
+<div class="side-nav">
+  <div class="user_title">
+    <img src="images/user.png" alt="Network icon">
+    <div>
+      <h2>My Social Media</h2>
+    </div>
+  </div>
+  <ul>
+    <li><a href="https://youtube.com/@XplizitNM7"><img src="images/youtube.png" alt="Youtube icon"><span>Youtube</span></a></li>
+    <li><a href="https://open.spotify.com/user/12140980884?si=iz5y5oF6SPGLse5J82yxXQ&utm_source=copy-link"><img src="images/spotify.png" alt="Spotify icon"><span>Spotify</span></a></li>
+    <li><a href="https://instagram.com/the_young_swag"><img src="images/instagram.png" alt="Instagram icon"><span>Instagram</span></a></li>
+    <li><a href="https://pin.it/5EBqvMs"><img src="images/pinterest.png" alt="Pinterest icon"><span>Pinterest</span></a></li>
+  </ul>
+</div>
+
+	
+	<div class="img-box">
+		<img src="images/EYE.png" class="back-img" alt="Eye image">
+		<img src="images/Ivan_Harvey_Rivera.png" class="main-img" alt="Profile image">
+</div>
+	  
+      <nav>
+        <div class="logo">
+          <img src="images/artificial-intelligence.png" alt="Logo image">
+        </div>
+	
+		
+	<div class="popUp" id="popUp">
+		<img src="images/pngegg.png" alt="Pop-up image">
+		<h2>YOU ARE MY FAVORITE!!!</h2>
+		<p>and... I also like</p>
+		<p>•The Office</p>
+		<p>•DARK</p>
+		<p>•Naruto</p>
+		<p>•Attack On Titan</p>
+		<p>•Jujutsu Kaisen</p>
+		<p>•Assassination Classroom </p>
+		<p>and many more!</p>
+		<button type="button" onclick="closePopUp()">CUTE</button>
+	</div>
+
+      </nav>
+	  
+      <div class="container">
+        <h1 id="current-time"></h1>
+        <div class="quotes">
+          <p>TODAY'S QUOTE:</p>
+          <h2>"That Move You're Afraid To Make Might Just Be The One."</h2>
+        </div>
+		</div>
+		
+		<div class="typeAuto">
+		
+<svg viewBox="0 0 320 20">
+  <defs>
+    <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="5%" stop-color="var(--gradient-start-color)"/>
+      <stop offset="95%" stop-color="var(--gradient-end-color)"/>
+    </linearGradient>
+    <pattern id="wave" x="0" y="0" width="320" height="20" patternUnits="userSpaceOnUse">
+      <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 T140 9 T160 9 T180 9 T200 9 T220 9 T240 9 T260 9 T280 9 T300 9 T320 9 V20 H-40z" fill="url(#gradient)"> 
+        <animateTransform
+            attributeName="transform"
+            begin="0s"
+            dur="3.5s"
+            type="translate"
+            from="0,0"
+            to="80,0"
+            repeatCount="indefinite" />
+      </path>
+    </pattern>
+  </defs>
+  <text text-anchor="middle" x="160" y="15" font-size="20" fill="url(#wave)" fill-opacity="1">Ivan Harvey Rivera</text>
+  <text text-anchor="middle" x="160" y="15" font-size="20" fill="url(#gradient)" fill-opacity="0.4">Ivan Harvey Rivera</text>
+</svg>
+
+
+
+
+		</div>
+	</div>
+		
+		<script>
+  let time = document.getElementById("current-time");
+
+  setInterval(() => {
+    let d = new Date();
+    time.innerHTML = d.toLocaleTimeString([], {hour12: true});
+  }, 1000);
+</script>
+		
+		<script>
+			const popUp = document.getElementById("popUp");
+
+			function openPopUp() {
+			popUp.classList.add("open-popUp");
+			}
+
+			function closePopUp() {
+			popUp.classList.remove("open-popUp");
+			}
+		</script>
+		
+		<script>
+		var icon =document.getElementById("icon");
+		
+		icon.onclick =function(){
+			document.body.classList.toggle("dark-theme");
+		}
+		
+		</script>
+		
+
+	</body>
+</html>
+
+
