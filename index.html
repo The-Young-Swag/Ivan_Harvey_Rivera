@@ -100,15 +100,20 @@
 
 		</div>
 	</div>
-		
 		<script>
   let time = document.getElementById("current-time");
 
   setInterval(() => {
     let d = new Date();
-    time.innerHTML = d.toLocaleTimeString([], {hour12: true});
+    let hours = d.getHours();
+    let minutes = d.getMinutes();
+    let seconds = d.getSeconds();
+    let amOrPm = hours >= 12 ? "PM" : "AM";
+    hours = hours % 12 || 12;
+    time.innerHTML = hours + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds) + " " + amOrPm;
   }, 1000);
 </script>
+
 		
 		<script>
 			const popUp = document.getElementById("popUp");
